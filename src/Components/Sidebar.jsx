@@ -3,7 +3,7 @@ import React from 'react'
 const Sidebar = () => {
   return (
     <div>
-        <div className='bg-[#FEF9EB] md:fixed left-0 bottom-0 top-0 max-sm:h-screen md:w-[30%] p-10 flex flex-col justify-between'>
+        <div className='bg-[#FEF9EB] md:fixed left-0 bottom-0 top-0 max-sm:h-[80dvh] md:w-[30%] p-10 flex flex-col justify-between'>
             <img src="logo.png" alt="illuminated-press logo" className='w-[140px]' />
             
             <div>

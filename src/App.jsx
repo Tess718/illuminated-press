@@ -4,6 +4,7 @@ import Signup from './Auth/Signup.jsx'
 import Signin from './Auth/Signin.jsx'
 import ForgotPassword from './Auth/ForgotPassword.jsx'
 import Dashboard from './pages/Dashboard.jsx';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const App = () => {
   return (

@@ -55,7 +55,11 @@ function DashSidebar() {
   ];
 
  return (
-  <aside className="fixed left-0 top-0 h-screen w-[270px] flex flex-col justify-between border-r border-[#E5E5E5] bg-[#E8E8E9] overflow-y-auto scrollbar-parent">
+  <aside 
+  className="fixed left-0 top-0 h-screen w-[20%] flex flex-col justify-between border-r border-[#E5E5E5] bg-[#F9F9FA] overflow-y-auto scrollbar-parent"
+  onMouseEnter={(e) => e.currentTarget.classList.add('is-hovered')}
+  onMouseLeave={(e) => e.currentTarget.classList.remove('is-hovered')}
+>
     {/* Logo + Menus */}
     <div className="p-4">
       {/* Logo */}
@@ -102,7 +106,7 @@ function DashSidebar() {
 
 
 
-    <div className="p-4 border-t border-[#E5E5E5] mt-20">
+    <div className="p-4 border-t border-[#E5E5E5] mt-50">
       {/* Plan card */}
       <div className="bg-[#EFF5ED] rounded-lg p-2.5 text-sm mb-2">
         <div className="flex items-start justify-between mb-3">
