@@ -219,12 +219,23 @@ const Dashboard = () => {
                   <Search size={14} className='absolute left-2 top-1/2 -translate-y-1/2 text-[#737373]' />
                  </div>
 
-                  <div className="flex font-medium items-center text-[14px] leading-[100%] tracking-[0em] text-center text-[#161924] rounded-lg border border-[#E8E8E9] h-10 p-3 gap-1 shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] lg:basis-[20%] basis-[40%] md:basis-[45%]">
-                    <ListOrdered size={20} />
-                    <p>Sort by</p>
-                    <i className="bi bi-chevron-down"></i>
-                  </div>
-                  
+                  <div className="relative lg:basis-[20%] basis-[40%] md:basis-[45%]">
+                    <div className="flex items-center font-medium text-[14px] text-[#161924] border border-[#E8E8E9] h-10 p-3 gap-1 rounded-lg shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026]">
+                      <ListOrdered size={20} />
+                      <p>Sort by</p>
+                      <i className="bi bi-chevron-down ml-auto"></i>
+                    </div>
+
+                    <select
+                      className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                      onChange={(e) => console.log(e.target.value)}
+                    >
+                      <option value="newest">Newest</option>
+                      <option value="oldest">Oldest</option>
+                      <option value="a-z">A to Z</option>
+                      <option value="z-a">Z to A</option>
+                    </select>
+                </div>
                   <div className="flex font-medium items-center text-[14px] leading-[100%] tracking-[0em] text-center text-[#161924] rounded-lg border border-[#E8E8E9] h-10 p-3 gap-1 shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] lg:basis-[15%] basis-[35%]">
                     <Settings2 size={20} />
                     <p>Filter</p>
@@ -470,7 +481,7 @@ const Dashboard = () => {
                 <div className="flex items-center gap-1">
                   {/* Previous button */}
                   <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA] shadow">
-                    ←
+                    <i className="bi bi-arrow-left"></i>
                   </button>
 
                   {/* Page numbers */}
@@ -493,7 +504,7 @@ const Dashboard = () => {
 
                   {/* Next button */}
                   <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA] shadow">
-                    →
+                   <i className="bi bi-arrow-right"></i>
                   </button>
                 </div>
                 </div>
