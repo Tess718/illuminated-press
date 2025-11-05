@@ -22,3 +22,16 @@
   background-color: rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s ease;
 }
+
+.bg-gradient{
+  background: linear-gradient(113.94deg, rgba(26, 219, 187, 0.08) -25.88%, rgba(20, 165, 237, 0.08) 6.86%, rgba(127, 100, 251, 0.08) 36.47%, rgba(243, 50, 101, 0.08) 66.87%, rgba(255, 175, 132, 0.08) 95.7%, rgba(255, 118, 108, 0.08) 123.75%);
+
+}
+
+.border-gradient{
+  border: 1px solid;
+  border-image-source: linear-gradient(113.94deg, #1ADBBB -25.88%, #14A5ED 6.86%, #7F64FB 36.47%, #F33265 66.87%, #FFAF84 95.7%, #FF766C 123.75%);
+
+
+}
+

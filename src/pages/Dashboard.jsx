@@ -1,8 +1,11 @@
 import React from 'react'
 import DashSidebar from '../Components/DashSidebar'
 import { Search, Settings2, ListOrdered } from 'lucide-react'
+import NewsletterTable from '../Components/Newslettertable'
+import TrendingTopics from '../Components/TrendingTopics'
 
 const Dashboard = () => {
+
   return (
     <div>
         <div className="flex justify-end">
@@ -203,8 +206,8 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className='py-2.5 px-4 border border-[#E8E8E9] rounded-2xl'>
-              <div className="flex justify-between items-center">
+            <div className='py-2.5 border border-[#E8E8E9] rounded-2xl'>
+              <div className="flex justify-between items-center  px-4">
                 <h5 className='font-medium text-[18px] leading-[150%] tracking-[0em] text-center text-[#161924]'>Newsletters</h5>
 
               <div className='flex gap-3 items-center'>
@@ -234,7 +237,123 @@ const Dashboard = () => {
               </div>
 
               </div>
+
+              <div className="mt-5 overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-[#F9F9FA]">
+                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start flex items-center gap-2">
+                        <input type="checkbox" /> Template
+                      </th>
+                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Preview snippet</th>
+                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Generated date</th>
+                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Topic</th>
+                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Linked Character</th>
+                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {[
+                      { topic: "AI Trends" },
+                      { topic: "Climate Change" },
+                      { topic: "Sustainable Living" },
+                      { topic: "AI Trends & Research" },
+                      { topic: "Tech Innovations" },
+                    ].map((row, i) => (
+                      <tr key={i}>
+                        <td className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 flex items-center gap-2">
+                          <input type="checkbox" />
+                          <img src="/amazon.jpg" className="w-7 h-7 rounded-full" alt="" />
+                          <div className="flex flex-col">
+                            <p>Amazon Hacks</p>
+                            <p>Edition 1</p>
+                          </div>
+                        </td>
+                        <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] px-4">
+                          Cloud Infrastructure Migration for X...
+                        </td>
+                        <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] py-2.5 px-4">
+                          Mon, 12 Jan 2025
+                        </td>
+                        <td className="border border-[#E8E8E9] text-center py-2.5 px-4">
+                          <div className="text-[#864DC0] text-[12px] font-medium rounded-sm border border-[#DEC2FA] bg-[#F3EBFA] py-2 px-4 w-fit">
+                            {row.topic}
+                          </div>
+                        </td>
+                        <td className="text-[#5A5C66] border border-[#E8E8E9] py-2.5 px-4">
+                          <div className="flex gap-3">
+                            <div className="flex items-center gap-2">
+                              <img src="/prof.jpg" alt="" className="w-7 h-7 rounded-full" />
+                              <small>Professor</small>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <img src="/cartoon.jpg" alt="" className="w-7 h-7 rounded-full" />
+                              <small>Cartoon</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="border border-[#E8E8E9] py-2.5 px-4">
+                          <i className="bi bi-three-dots"></i>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+
+                <div className="flex items-center justify-between mt-4 px-2">
+                {/* Left: Show items dropdown */}
+                <div className="flex items-center gap-2 text-[#5A5C66] text-sm">
+                  <span>Show items</span>
+                  <select
+                    className="border border-[#E8E8E9] rounded-md px-3 py-1.5 focus:outline-none"
+                    defaultValue="25"
+                  >
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+
+                {/* Right: Pagination */}
+                <div className="flex items-center gap-1">
+                  {/* Previous button */}
+                  <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA]">
+                    ←
+                  </button>
+
+                  {/* Page numbers */}
+                  <div className="flex items-center border border-[#E8E8E9] rounded-md overflow-hidden">
+                    {[1, 2, 3].map((page) => (
+                      <button
+                        key={page}
+                        className={`px-3 py-1.5 text-sm ${
+                          page === 1
+                            ? "bg-[#F9F9FA] font-semibold"
+                            : "hover:bg-[#F9F9FA]"
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    ))}
+                    <span className="px-2 text-[#5A5C66]">…</span>
+                    <button className="px-3 py-1.5 text-sm hover:bg-[#F9F9FA]">6</button>
+                  </div>
+
+                  {/* Next button */}
+                  <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA]">
+                    →
+                  </button>
+                </div>
+              </div>
+
+              </div>
+
+
+
             </div>
+              <TrendingTopics />
           </div>
         </div>
 

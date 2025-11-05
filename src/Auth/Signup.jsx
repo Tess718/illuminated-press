@@ -15,7 +15,7 @@ const Signup = () => {
                     <p className='font-normal text-sm text-[#737373]'>Start personalizing your AI-powered newsletters today it <br /> only takes a minute</p>
 
                     <form action="" className='text-sm flex flex-col gap-3'>
-                        <div className="flex justify-center gap-5">
+                        <div className="flex flex-col md:flex-row justify-center gap-5">
                             <div className='flex flex-col gap-1'>
                                 <label htmlFor="FirstName" className='font-medium'>First Name</label>
                                 <input type="text" name='FirstName' placeholder='First Name' className='border border-[#E5E5E5] h-9 ps-2 rounded-lg outline-0 shadow-xs' />
