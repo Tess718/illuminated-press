@@ -5,12 +5,12 @@ import Sidebar from '../Components/Sidebar.jsx'
 const ForgotPassword = () => {
   return (
     <div>
-        <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-0">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-0">
             <div className="basis-[30%]">
                 <Sidebar />
             </div>
-            <div className="basis-[70%] flex min-h-screen justify-center items-center">
-                <div className="mx-auto flex gap-4 flex-col">
+            <div className="basis-[70%] flex md:min-h-screen justify-center items-center">
+                <div className="mx-auto flex gap-4 flex-col max-sm:p-5">
                     <h3 className='font-bold text-3xl'>Forgot Your Password?</h3>
                     <p className='font-normal text-sm text-[#737373]'>Enter your email, and we’ll send you a link to reset your <br /> password.</p>
 

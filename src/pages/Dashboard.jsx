@@ -7,12 +7,12 @@ const Dashboard = () => {
 
   return (
     <div>
-        <div className="flex justify-end">
+        <div className="flex flex-col lg:flex-row justify-end">
           <DashSidebar />
           
-          <div className='basis-[80%] p-5'>
-            <div className="flex justify-between items-center">
-              <div className="relative w-fit">
+          <div className='md:basis-[80%] basis-full p-5'>
+            <div className="flex justify-between items-center flex-col md:flex-row max-sm:gap-5 md:ps-15 lg:ps-0">
+              <div className="relative w-fit max-sm:ms-auto">
               <input 
                 type="search" 
                 placeholder='Search' 
@@ -43,7 +43,7 @@ const Dashboard = () => {
 
             </div>
 
-            <div className="grid grid-cols-3 gap-4 py-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 py-8">
               <div className='border border-[#E8E8E9] rounded-xl p-2'>
                 <div className='flex justify-between p-2'>
                   <h5 className='font-medium text-black text-lg'>Newsletters Generated</h5>
@@ -206,31 +206,31 @@ const Dashboard = () => {
             </div>
 
             <div className='py-2.5 border border-[#E8E8E9] rounded-2xl'>
-              <div className="flex justify-between items-center  px-4">
-                <h5 className='font-medium text-[18px] leading-[150%] tracking-[0em] text-center text-[#161924]'>Newsletters</h5>
+              <div className="flex justify-between items-center flex-col md:flex-row px-4 max-sm:gap-2">
+                <h5 className='font-medium text-[18px] leading-[150%] tracking-[0em] text-start text-[#161924] basis-[30%]'>Newsletters</h5>
 
-              <div className='flex gap-3 items-center'>
-                 <div className="relative w-fit">
+              <div className='flex gap-3 items-center lg:flex-nowrap flex-wrap basis-[70%] '>
+                 <div className="relative w-fit lg:basis-[60%] basis-full">
                   <input 
                     type="search" 
                     placeholder='Search data' 
-                    className='shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] rounded-md h-10 px-3 pl-7 text-[#737373] font-medium border border-[#E8E8E9] text-sm w-[385px] outline-0' 
+                    className='shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] rounded-md h-10 px-3 pl-7 text-[#737373] font-medium border border-[#E8E8E9] text-sm w-full outline-0' 
                   />
                   <Search size={14} className='absolute left-2 top-1/2 -translate-y-1/2 text-[#737373]' />
                  </div>
 
-                  <div className="flex font-medium items-center text-[14px] leading-[100%] tracking-[0em] text-center text-[#161924] rounded-lg border border-[#E8E8E9] h-10 p-3 gap-1 shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026]">
+                  <div className="flex font-medium items-center text-[14px] leading-[100%] tracking-[0em] text-center text-[#161924] rounded-lg border border-[#E8E8E9] h-10 p-3 gap-1 shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] lg:basis-[20%] basis-[40%] md:basis-[45%]">
                     <ListOrdered size={20} />
                     <p>Sort by</p>
                     <i className="bi bi-chevron-down"></i>
                   </div>
                   
-                  <div className="flex font-medium items-center text-[14px] leading-[100%] tracking-[0em] text-center text-[#161924] rounded-lg border border-[#E8E8E9] h-10 p-3 gap-1 shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026]">
+                  <div className="flex font-medium items-center text-[14px] leading-[100%] tracking-[0em] text-center text-[#161924] rounded-lg border border-[#E8E8E9] h-10 p-3 gap-1 shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] lg:basis-[15%] basis-[35%]">
                     <Settings2 size={20} />
                     <p>Filter</p>
                   </div>
 
-                  <div className='w-10 h-10 grid place-content-center border border-[#E8E8E9] rounded-lg shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026]'>
+                  <div className='w-10 h-10 grid place-content-center border border-[#E8E8E9] rounded-lg shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] lg:basis-[6%] basis-[17%] md:basis-[15%]'>
                     <i className="bi bi-three-dots-vertical"></i>
                   </div>
               </div>
@@ -238,7 +238,7 @@ const Dashboard = () => {
               </div>
 
               <div className="mt-5 overflow-x-auto">
-                <table className="w-full border-collapse">
+                <table className="min-w-[1200px] lg:min-w-full w-full border-collapse">
                 <thead>
                   <tr className="bg-[#F9F9FA]">
                     <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start flex items-center gap-2">
@@ -449,7 +449,9 @@ const Dashboard = () => {
                 </table>
 
 
-                <div className="flex items-center justify-between mt-4 px-2">
+
+              </div>
+                <div className="flex flex-col md:flex-row pb-2.5 items-start max-sm:gap-3 md:items-center justify-between mt-4 px-4">
                 {/* Left: Show items dropdown */}
                 <div className="flex items-center gap-2 text-[#5A5C66] text-sm">
                   <span>Show items</span>
@@ -494,14 +496,15 @@ const Dashboard = () => {
                     →
                   </button>
                 </div>
-              </div>
-
-              </div>
+                </div>
 
 
 
             </div>
+            <div className="flex justify-end">
               <TrendingTopics />
+
+            </div>
           </div>
         </div>
 

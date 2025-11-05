@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 const Signin = () => {
   return (
     <div>
-        <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-0">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-0">
             <div className="basis-[30%]">
                 <Sidebar />
             </div>
-            <div className="basis-[70%] max-sm:pt-10 flex h-screen justify-center items-center gap-3">
-                <div className="mx-auto flex gap-4 flex-col">
+            <div className="basis-[70%] max-sm:pb-10 flex h-screen justify-center items-center gap-3">
+                <div className="mx-auto flex gap-4 flex-col max-sm:px-5">
                     <h3 className='font-bold text-3xl'>Sign in</h3>
                     <p className='font-normal text-sm text-[#737373]'>Log in to unlock tailored content and stay connected with <br /> your community.</p>
 
