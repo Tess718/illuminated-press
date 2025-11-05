@@ -1,7 +1,6 @@
 import React from 'react'
 import DashSidebar from '../Components/DashSidebar'
 import { Search, Settings2, ListOrdered } from 'lucide-react'
-import NewsletterTable from '../Components/Newslettertable'
 import TrendingTopics from '../Components/TrendingTopics'
 
 const Dashboard = () => {
@@ -240,66 +239,215 @@ const Dashboard = () => {
 
               <div className="mt-5 overflow-x-auto">
                 <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="bg-[#F9F9FA]">
-                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start flex items-center gap-2">
-                        <input type="checkbox" /> Template
-                      </th>
-                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Preview snippet</th>
-                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Generated date</th>
-                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Topic</th>
-                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">Linked Character</th>
-                      <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start"></th>
-                    </tr>
-                  </thead>
+                <thead>
+                  <tr className="bg-[#F9F9FA]">
+                    <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start flex items-center gap-2">
+                      <input type="checkbox" /> Template
+                    </th>
+                    <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">
+                      Preview snippet
+                    </th>
+                    <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">
+                      Generated date
+                    </th>
+                    <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">
+                      Topic
+                    </th>
+                    <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start">
+                      Linked Character
+                    </th>
+                    <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start"></th>
+                  </tr>
+                </thead>
 
-                  <tbody>
-                    {[
-                      { topic: "AI Trends" },
-                      { topic: "Climate Change" },
-                      { topic: "Sustainable Living" },
-                      { topic: "AI Trends & Research" },
-                      { topic: "Tech Innovations" },
-                    ].map((row, i) => (
-                      <tr key={i}>
-                        <td className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 flex items-center gap-2">
-                          <input type="checkbox" />
-                          <img src="/amazon.jpg" className="w-7 h-7 rounded-full" alt="" />
-                          <div className="flex flex-col">
-                            <p>Amazon Hacks</p>
-                            <p>Edition 1</p>
-                          </div>
-                        </td>
-                        <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] px-4">
-                          Cloud Infrastructure Migration for X...
-                        </td>
-                        <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] py-2.5 px-4">
-                          Mon, 12 Jan 2025
-                        </td>
-                        <td className="border border-[#E8E8E9] text-center py-2.5 px-4">
-                          <div className="text-[#864DC0] text-[12px] font-medium rounded-sm border border-[#DEC2FA] bg-[#F3EBFA] py-2 px-4 w-fit">
-                            {row.topic}
-                          </div>
-                        </td>
-                        <td className="text-[#5A5C66] border border-[#E8E8E9] py-2.5 px-4">
-                          <div className="flex gap-3">
-                            <div className="flex items-center gap-2">
-                              <img src="/prof.jpg" alt="" className="w-7 h-7 rounded-full" />
-                              <small>Professor</small>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <img src="/cartoon.jpg" alt="" className="w-7 h-7 rounded-full" />
-                              <small>Cartoon</small>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="border border-[#E8E8E9] py-2.5 px-4">
-                          <i className="bi bi-three-dots"></i>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
+                <tbody>
+                  <tr>
+                    <td className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 flex items-center gap-2">
+                      <input type="checkbox" />
+                      <img src="/amazon.jpg" className="w-7 h-7 rounded-full" alt="" />
+                      <div className="flex flex-col">
+                        <p>Amazon Hacks</p>
+                        <p>Edition 1</p>
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] px-4">
+                      Cloud Infrastructure Migration for X...
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] py-2.5 px-4">
+                      Mon, 12 Jan 2025
+                    </td>
+                    <td className="border border-[#E8E8E9] text-center py-2.5 px-4">
+                      <div className="text-[#864DC0] text-[12px] font-medium rounded-sm border border-[#DEC2FA] bg-[#F3EBFA] py-2 px-4 w-fit">
+                        AI Trends
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] border border-[#E8E8E9] py-2.5 px-4">
+                      <div className="flex gap-3">
+                        <div className="flex items-center gap-2">
+                          <img src="/prof.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Professor</small>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <img src="/cartoon.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Cartoon</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="border border-[#E8E8E9] py-2.5 px-4">
+                      <i className="bi bi-three-dots"></i>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 flex items-center gap-2">
+                      <input type="checkbox" />
+                      <img src="/amazon.jpg" className="w-7 h-7 rounded-full" alt="" />
+                      <div className="flex flex-col">
+                        <p>Amazon Hacks</p>
+                        <p>Edition 1</p>
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] px-4">
+                      Cloud Infrastructure Migration for X...
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] py-2.5 px-4">
+                      Mon, 12 Jan 2025
+                    </td>
+                    <td className="border border-[#E8E8E9] text-center py-2.5 px-4">
+                      <div className="text-[#864DC0] text-[12px] font-medium rounded-sm border border-[#DEC2FA] bg-[#F3EBFA] py-2 px-4 w-fit">
+                        Climate Change
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] border border-[#E8E8E9] py-2.5 px-4">
+                      <div className="flex gap-3">
+                        <div className="flex items-center gap-2">
+                          <img src="/prof.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Professor</small>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <img src="/cartoon.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Cartoon</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="border border-[#E8E8E9] py-2.5 px-4">
+                      <i className="bi bi-three-dots"></i>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 flex items-center gap-2">
+                      <input type="checkbox" />
+                      <img src="/amazon.jpg" className="w-7 h-7 rounded-full" alt="" />
+                      <div className="flex flex-col">
+                        <p>Amazon Hacks</p>
+                        <p>Edition 1</p>
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] px-4">
+                      Cloud Infrastructure Migration for X...
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] py-2.5 px-4">
+                      Mon, 12 Jan 2025
+                    </td>
+                    <td className="border border-[#E8E8E9] text-center py-2.5 px-4">
+                      <div className="text-[#864DC0] text-[12px] font-medium rounded-sm border border-[#DEC2FA] bg-[#F3EBFA] py-2 px-4 w-fit">
+                        Sustainable Living
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] border border-[#E8E8E9] py-2.5 px-4">
+                      <div className="flex gap-3">
+                        <div className="flex items-center gap-2">
+                          <img src="/prof.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Professor</small>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <img src="/cartoon.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Cartoon</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="border border-[#E8E8E9] py-2.5 px-4">
+                      <i className="bi bi-three-dots"></i>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 flex items-center gap-2">
+                      <input type="checkbox" />
+                      <img src="/amazon.jpg" className="w-7 h-7 rounded-full" alt="" />
+                      <div className="flex flex-col">
+                        <p>Amazon Hacks</p>
+                        <p>Edition 1</p>
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] px-4">
+                      Cloud Infrastructure Migration for X...
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] py-2.5 px-4">
+                      Mon, 12 Jan 2025
+                    </td>
+                    <td className="border border-[#E8E8E9] text-center py-2.5 px-4">
+                      <div className="text-[#864DC0] text-[12px] font-medium rounded-sm border border-[#DEC2FA] bg-[#F3EBFA] py-2 px-4 w-fit">
+                        AI Trends & Research
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] border border-[#E8E8E9] py-2.5 px-4">
+                      <div className="flex gap-3">
+                        <div className="flex items-center gap-2">
+                          <img src="/prof.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Professor</small>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <img src="/cartoon.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Cartoon</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="border border-[#E8E8E9] py-2.5 px-4">
+                      <i className="bi bi-three-dots"></i>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 flex items-center gap-2">
+                      <input type="checkbox" />
+                      <img src="/amazon.jpg" className="w-7 h-7 rounded-full" alt="" />
+                      <div className="flex flex-col">
+                        <p>Amazon Hacks</p>
+                        <p>Edition 1</p>
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] px-4">
+                      Cloud Infrastructure Migration for X...
+                    </td>
+                    <td className="text-[#5A5C66] text-[14px] border border-[#E8E8E9] py-2.5 px-4">
+                      Mon, 12 Jan 2025
+                    </td>
+                    <td className="border border-[#E8E8E9] text-center py-2.5 px-4">
+                      <div className="text-[#864DC0] text-[12px] font-medium rounded-sm border border-[#DEC2FA] bg-[#F3EBFA] py-2 px-4 w-fit">
+                        Tech Innovations
+                      </div>
+                    </td>
+                    <td className="text-[#5A5C66] border border-[#E8E8E9] py-2.5 px-4">
+                      <div className="flex gap-3">
+                        <div className="flex items-center gap-2">
+                          <img src="/prof.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Professor</small>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <img src="/cartoon.jpg" alt="" className="w-7 h-7 rounded-full" />
+                          <small>Cartoon</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="border border-[#E8E8E9] py-2.5 px-4">
+                      <i className="bi bi-three-dots"></i>
+                    </td>
+                  </tr>
+                </tbody>
                 </table>
+
 
                 <div className="flex items-center justify-between mt-4 px-2">
                 {/* Left: Show items dropdown */}
