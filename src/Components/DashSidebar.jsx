@@ -6,38 +6,38 @@ function DashSidebar() {
   const navItems = [
     {
       label: "Dashboard",
-      icon: "/Solid.png",
+      icon: "/home-line.png",
       iconActive: "/Solid.png",
     },
     {
       label: "Topics",
       icon: "/icon-park-outline_topic.png",
-      iconActive: "/icons/topics-active.png",
+      iconActive: "/active_topic.png",
     },
     {
       label: "Preferences",
       icon: "/preferences.png",
-      iconActive: "/icons/preferences-active.png",
+      iconActive: "/preferences.png",
     },
     {
       label: "Characters",
       icon: "/character.png",
-      iconActive: "/icons/characters-active.png",
+      iconActive: "/character.png",
     },
     {
       label: "Newsletter",
       icon: "/newsletter.png",
-      iconActive: "/icons/newsletter-active.png",
+      iconActive: "/newsletter.png",
     },
     {
       label: "Automation",
       icon: "/fad_automation-4p.png",
-      iconActive: "/icons/automation-active.png",
+      iconActive: "/fad_automation-4p.png",
     },
     {
       label: "Payments",
       icon: "/fluent_payment.png",
-      iconActive: "/icons/payments-active.png",
+      iconActive: "/fluent_payment.png",
     },
   ];
 
@@ -45,12 +45,12 @@ function DashSidebar() {
     {
       label: "Settings",
       icon: "/settings.png",
-      iconActive: "/icons/settings-active.png",
+      iconActive: "/icons/settings.png",
     },
     {
       label: "Help Center",
       icon: "/help.png",
-      iconActive: "/icons/support-active.png",
+      iconActive: "/help.png",
     },
   ];
 

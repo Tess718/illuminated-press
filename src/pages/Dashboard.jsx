@@ -16,7 +16,7 @@ const Dashboard = () => {
               <input 
                 type="search" 
                 placeholder='Search' 
-                className='shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] rounded-md h-9 px-3 pl-7 text-[#737373] font-medium text-sm' 
+                className='shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] rounded-md h-9 px-3 pl-7 text-[#737373] font-medium text-sm outline-0' 
               />
               <Search size={14} className='absolute left-2 top-1/2 -translate-y-1/2 text-[#737373]' />
               </div>
@@ -214,7 +214,7 @@ const Dashboard = () => {
                   <input 
                     type="search" 
                     placeholder='Search data' 
-                    className='shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] rounded-md h-10 px-3 pl-7 text-[#737373] font-medium border border-[#E8E8E9] text-sm w-[385px]' 
+                    className='shadow-[0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] rounded-md h-10 px-3 pl-7 text-[#737373] font-medium border border-[#E8E8E9] text-sm w-[385px] outline-0' 
                   />
                   <Search size={14} className='absolute left-2 top-1/2 -translate-y-1/2 text-[#737373]' />
                  </div>
@@ -454,7 +454,7 @@ const Dashboard = () => {
                 <div className="flex items-center gap-2 text-[#5A5C66] text-sm">
                   <span>Show items</span>
                   <select
-                    className="border border-[#E8E8E9] rounded-md px-3 py-1.5 focus:outline-none"
+                    className="border border-[#E8E8E9] rounded-md px-3 py-1.5 focus:outline-none shadow"
                     defaultValue="25"
                   >
                     <option value="10">10</option>
@@ -467,18 +467,18 @@ const Dashboard = () => {
                 {/* Right: Pagination */}
                 <div className="flex items-center gap-1">
                   {/* Previous button */}
-                  <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA]">
+                  <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA] shadow">
                     ←
                   </button>
 
                   {/* Page numbers */}
-                  <div className="flex items-center border border-[#E8E8E9] rounded-md overflow-hidden">
+                  <div className="flex items-center border border-[#E8E8E9] rounded-md overflow-hidden bg-[#F9F9FA]">
                     {[1, 2, 3].map((page) => (
                       <button
                         key={page}
                         className={`px-3 py-1.5 text-sm ${
                           page === 1
-                            ? "bg-[#F9F9FA] font-semibold"
+                            ? "bg-white font-semibold shadow rounded-md border border-[#E8E8E9]"
                             : "hover:bg-[#F9F9FA]"
                         }`}
                       >
@@ -490,7 +490,7 @@ const Dashboard = () => {
                   </div>
 
                   {/* Next button */}
-                  <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA]">
+                  <button className="border border-[#E8E8E9] rounded-md px-2 py-1 text-[#5A5C66] hover:bg-[#F9F9FA] shadow">
                     →
                   </button>
                 </div>

@@ -28,7 +28,8 @@
 
 }
 
-/* .border-gradient {
+/* .gradient-border {
+  position: relative;
   border: 1px solid transparent;
   border-image: linear-gradient(
     113.94deg,
@@ -40,4 +41,7 @@
     #ff766c 123.75%
   );
   border-image-slice: 1;
+  border-radius: 16px;
+  background-clip: padding-box;
 } */
+
