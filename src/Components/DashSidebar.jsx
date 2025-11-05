@@ -94,7 +94,7 @@ function DashSidebar() {
         </div>
 
         {/* Footer / Plan card */}
-        <div className="p-4 border-t border-[#E5E5E5] mt-50">
+        <div className="p-4 border-t border-[#E5E5E5] md:mt-50">
           <div className="bg-[#EFF5ED] rounded-lg p-2.5 text-sm mb-2">
             <div className="flex items-start justify-between mb-3">
               <button className="flex bg-[#619746] items-center gap-1 font-medium text-white h-9 px-3 rounded-md relative">
