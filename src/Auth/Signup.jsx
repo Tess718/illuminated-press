@@ -11,6 +11,7 @@ const Signup = () => {
             </div>
             <div className="basis-[70%] lg:h-[120dvh] max-sm:w-screen md:h-screen flex justify-center items-center max-sm:pb-10">
                 <div className="flex mx-auto flex-col gap-3 max-sm:px-5">
+                    <img src="/logo.png" alt="" className='w-[140px] pb-10 md:hidden' />
                     <h3 className='font-bold text-3xl'>Create Your Account</h3>
                     <p className='font-normal text-sm text-[#737373]'>Start personalizing your AI-powered newsletters today it <br /> only takes a minute</p>
 
