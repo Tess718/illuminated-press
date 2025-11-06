@@ -2,6 +2,8 @@ import React from 'react'
 import DashSidebar from '../Components/DashSidebar'
 import { Search, Settings2, ListOrdered } from 'lucide-react'
 import TrendingTopics from '../Components/TrendingTopics'
+import TemplatesTable from '../Components/TemplatesTable'
+import PerformanceDashboard from '../Components/PerformanceDashboard'
 
 const Dashboard = () => {
 
@@ -249,7 +251,7 @@ const Dashboard = () => {
               </div>
 
               <div className="mt-5 overflow-x-auto">
-                <table className="min-w-[1200px] lg:min-w-full w-full border-collapse">
+                {/* <table className="min-w-[1200px] lg:min-w-full w-full border-collapse">
                 <thead>
                   <tr className="bg-[#F9F9FA]">
                     <th className="text-[#5A5C66] font-medium text-[14px] border border-[#E8E8E9] py-2.5 px-4 text-start flex items-center gap-2">
@@ -457,8 +459,9 @@ const Dashboard = () => {
                     </td>
                   </tr>
                 </tbody>
-                </table>
+                </table> */}
 
+                <TemplatesTable />
 
 
               </div>
@@ -512,8 +515,13 @@ const Dashboard = () => {
 
 
             </div>
-            <div className="flex justify-end">
-              <TrendingTopics />
+            <div className="flex flex-col md:flex-row items-stretch gap-4 mt-6">
+              <div className="basis-[30%]">
+                <PerformanceDashboard />
+              </div>
+              <div className="basis-[70%]">
+                <TrendingTopics />
+              </div>
 
             </div>
           </div>

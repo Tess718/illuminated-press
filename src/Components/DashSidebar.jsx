@@ -1,9 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 function DashSidebar() {
   const [active, setActive] = useState("Dashboard");
   const [open, setOpen] = useState(false);
+
+  // Prevent body scroll when sidebar is open (mobile)
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   const navItems = [
     { label: "Dashboard", icon: "/home-line.png", iconActive: "/Solid.png" },
@@ -41,8 +54,6 @@ function DashSidebar() {
       <aside
         className={`fixed left-0 top-0 h-screen lg:w-[20%] md:w-[40%] w-[65%] flex flex-col justify-between border-r border-[#E5E5E5] bg-[#F9F9FA] overflow-y-auto scrollbar-parent transition-transform duration-300 z-50
           ${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
-        onMouseEnter={(e) => e.currentTarget.classList.add("is-hovered")}
-        onMouseLeave={(e) => e.currentTarget.classList.remove("is-hovered")}
       >
         {/* Logo + Menus */}
         <div className="p-4">
@@ -65,7 +76,6 @@ function DashSidebar() {
                     setActive(item.label);
                     setOpen(false);
                   }}
-                  className="font-semibold text-[16px]"
                 />
               ))}
             </nav>
@@ -86,7 +96,6 @@ function DashSidebar() {
                     setActive(item.label);
                     setOpen(false);
                   }}
-                  className="font-semibold text-[16px]"
                 />
               ))}
             </nav>
@@ -118,7 +127,7 @@ function DashSidebar() {
   );
 }
 
-function NavItem({ label, icon, iconActive, active, onClick, className = "" }) {
+function NavItem({ label, icon, iconActive, active, onClick }) {
   return (
     <button
       onClick={onClick}
@@ -127,8 +136,7 @@ function NavItem({ label, icon, iconActive, active, onClick, className = "" }) {
           active
             ? "bg-white [box-shadow:0px_0px_0px_1px_#E5E5E5,0px_4px_8px_-5px_#00000026] text-gray-900 font-medium"
             : "text-gray-600 hover:bg-gray-50"
-        }
-        ${className}`}
+        }`}
     >
       <img
         src={active ? iconActive : icon}
